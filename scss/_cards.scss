@@ -1,8 +1,12 @@
 // Custom Card Styling
 
 .card {
+  cursor: pointer;
+  &:hover{
+    box-shadow: 4px 4px 1px silver !important;
+  }
   .card-header {
-    // Format Dropdowns in Card Headings
+    // Format Drop-downs in Card Headings
     .dropdown {
       line-height: 1;
       .dropdown-menu {
