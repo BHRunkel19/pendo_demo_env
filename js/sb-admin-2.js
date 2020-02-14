@@ -46,4 +46,10 @@
     e.preventDefault();
   });
 
+  // Make cards clickable
+  // Deploy modal with card content displayed
+  $(document).on('click', '.card', function(e){
+    console.log(this.innerText);
+  })
+
 })(jQuery); // End of use strict
