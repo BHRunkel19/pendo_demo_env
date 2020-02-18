@@ -54,7 +54,7 @@
     console.log(this.innerText);
   })
 
-  $('#hoverBtn').on('mouseover', function(){
+  $('#hoverBtn').hover(function(){
     console.log(modal);
     modal.style.display = "block";
   });
