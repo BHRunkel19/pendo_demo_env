@@ -1,5 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
+  // Variable declaration
+  var modal = $('#myModal');
 
   // Toggle the side navigation
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
@@ -51,5 +53,19 @@
   $(document).on('click', '.card', function(e){
     console.log(this.innerText);
   })
+
+  $('#hoverBtn').on('mouseover', function(){
+    modal.style.display = "block";
+  });
+
+  $('#modal-close-btn').on('click', function(){
+    modal.style.display = "none";
+  });
+
+  $(window).on('click', function(e){
+    if (e.target == modal){
+      modal.style.display = "none";
+    }
+  });
 
 })(jQuery); // End of use strict
