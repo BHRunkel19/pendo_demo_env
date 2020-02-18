@@ -56,16 +56,16 @@
 
   $('#hoverBtn').hover(function(){
     console.log(modal);
-    modal.style.display = "block";
+    modal.css("display", "block");
   });
 
   $('#modal-close-btn').on('click', function(){
-    modal.style.display = "none";
+    modal.css("display", "none");
   });
 
   $(window).on('click', function(e){
     if (e.target == modal){
-      modal.style.display = "none";
+      modal.css("display", "none");
     }
   });
 })(jQuery); // End of use strict
