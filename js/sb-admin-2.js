@@ -55,6 +55,7 @@
   })
 
   $('#hoverBtn').on('mouseover', function(){
+    console.log(modal);
     modal.style.display = "block";
   });
 
