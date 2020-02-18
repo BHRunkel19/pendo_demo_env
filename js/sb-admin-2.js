@@ -63,7 +63,7 @@
     modal.style.display = "none";
   });
 
-  $(window).on('click', function(e){
+  $(document).on('click', function(e){
     if (e.target == modal){
       modal.style.display = "none";
     }
