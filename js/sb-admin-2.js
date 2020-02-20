@@ -55,7 +55,7 @@
   })
 
   $('#hoverBtn').hover(function(){
-    console.log(modal);
+    console.log(pendo);
     modal.css("display", "block");
   });
 
