@@ -54,10 +54,10 @@
     console.log(this.innerText);
   })
 
-  $('#hoverBtn').hover(function(){
-    console.log(pendo);
-    modal.css("display", "block");
-  });
+  // $('#hoverBtn').hover(function(){
+  //   console.log(pendo);
+  //   modal.css("display", "block");
+  // });
 
   $('#modal-close-btn').on('click', function(){
     modal.css("display", "none");
