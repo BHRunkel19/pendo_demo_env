@@ -12018,7 +12018,8 @@ body.sidebar-toggled footer.sticky-footer {
 
 /* Hover Guide */
 /* Hover Button Container */
-#hoverBtn {
+#hoverBtn,
+#modalBtn {
   cursor: pointer;
 }
 /* Modal Styling */
@@ -12055,3 +12056,5 @@ font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Walkthrough Menu + Modal */
