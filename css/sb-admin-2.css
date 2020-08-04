@@ -2559,6 +2559,7 @@ textarea.form-control {
 }
 
 .btn {
+  cursor: pointer !important;
   display: inline-block;
   font-weight: 400;
   color: #858796;
