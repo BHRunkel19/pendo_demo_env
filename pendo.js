@@ -134,6 +134,7 @@ var accounts = [
         function addTrackEvent(){
             var trackEventBtn = document.querySelector('#trackEventBtn');
             trackEventBtn.addEventListener('click', function(){
+                console.log('Sending Track Event to Pendo');
                 pendo.track('Track Event Example', {
                     user: pendo.getSerializedMetadata().visitor.id,
                     role: pendo.getSerializedMetadata().visitor.role
