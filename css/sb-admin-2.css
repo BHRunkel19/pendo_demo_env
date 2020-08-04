@@ -12016,9 +12016,8 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
-/* Hover Guide */
-/* Hover Button Container */
-#hoverBtn,
+/* Track Event Button Container */
+#trackEventBtn,
 #modalBtn {
   cursor: pointer;
 }

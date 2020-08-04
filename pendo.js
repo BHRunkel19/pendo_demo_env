@@ -1,4 +1,7 @@
 // Pendo Scripts //
+var trackEventBtn = document.querySelector('#trackEventBtn');
+console.log(trackEventBtn);
+
 var accounts = [
     "Stark Industries",
     "Wayne Enterprises",
