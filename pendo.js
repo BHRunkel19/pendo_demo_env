@@ -137,7 +137,8 @@ var accounts = [
                 console.log('Sending Track Event to Pendo');
                 pendo.track('Track Event Example', {
                     user: pendo.getSerializedMetadata().visitor.id,
-                    role: pendo.getSerializedMetadata().visitor.role
+                    role: pendo.getSerializedMetadata().visitor.role,
+                    text: "This is some sample text"
                 })  
         })
     }
