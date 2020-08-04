@@ -1,7 +1,4 @@
 // Pendo Scripts //
-var trackEventBtn = document.querySelector('#trackEventBtn');
-console.log(trackEventBtn);
-
 var accounts = [
     "Stark Industries",
     "Wayne Enterprises",
@@ -115,6 +112,7 @@ var accounts = [
                 events: {
                 ready: function() {
                     console.log("Pendo is ready!")
+                    addTrackEvent();
                 },
                 guidesLoaded: function() {
                     console.log("The guides have loaded!")
@@ -129,7 +127,17 @@ var accounts = [
 
         // input callback here //
         function lookupGuides(guides){
-        console.log(guides);
-        // loop over list of guides, determine whats active
+            console.log(guides);
+            // loop over list of guides, determine whats active
         }
+
+        function addTrackEvent(){
+            var trackEventBtn = document.querySelector('#trackEventBtn');
+            trackEventBtn.addEventListener('click', function(){
+                pendo.track('Track Event Example', {
+                    user: pendo.getSerializedMetadata().visitor.id,
+                    role: pendo.getSerializedMetadata().visitor.role
+                })  
+        })
+    }
 })('5ed91671-dfe6-4f7a-546f-5fd7b0804e58');
