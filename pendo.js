@@ -149,7 +149,7 @@ var accounts = [
             var launchRCElement = document.querySelector('[data-id="1.0-Nav-Home.Dashboard"]');
             var rc = pendo.findGuideById('uY3KchoDHeBYQ5TsMmMd3f-p1gA');
             launchRCElement.addEventListener('click', function(e){
-                rc.launch();
+                rc.show();
                 // rc.modules[0].launch();
             })
         }
