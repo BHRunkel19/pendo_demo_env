@@ -133,8 +133,8 @@ var accounts = [
         }
 
         function addTrackEvent(){
-            var trackEventBtn = dom('#trackEventBtn')[0];
-            trackEventBtn.on('click', function(e){
+            var trackEventBtn = document.querySelector('#trackEventBtn');
+            trackEventBtn.addEventListener('click', function(e){
                 console.log('Sending Track Event to Pendo: ' + e);
                 alert('Track Event Sent!');
                 pendo.track('Track Event Example', {
@@ -146,12 +146,12 @@ var accounts = [
         }
 
         function addRCElementHandler(){
-            var launchRCElement = dom('[data-id="1.0-Nav-Home.Dashboard"]')[0];
+            var launchRCElement = document.querySelector('[data-id="1.0-Nav-Home.Dashboard"]');
             var rc = pendo.findGuideById('uY3KchoDHeBYQ5TsMmMd3f-p1gA');
-            launchRCElement.on('click', function(e){
+            launchRCElement.addEventListener('click', function(e){
                 rc.launch();
                 // rc.modules[0].launch();
             })
         }
 
-})('5ed91671-dfe6-4f7a-546f-5fd7b0804e58', pendo.dom);
+})('5ed91671-dfe6-4f7a-546f-5fd7b0804e58');
