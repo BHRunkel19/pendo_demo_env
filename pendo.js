@@ -113,11 +113,11 @@ var accounts = [
                 ready: function() {
                     console.log("Pendo is ready!")
                     addTrackEvent();
-                    addRCElementHandler();
                 },
                 guidesLoaded: function() {
                     console.log("The guides have loaded!")
                     lookupGuides(pendo.guides);
+                    addRCElementHandler();
                     // callback //
                 },
                 guidesFailed: function() {
