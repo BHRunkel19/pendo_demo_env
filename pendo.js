@@ -79,7 +79,7 @@ var accounts = [
     }
   
 
-  (function(apiKey){
+  (function(apiKey, dom){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
         o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
@@ -113,6 +113,7 @@ var accounts = [
                 ready: function() {
                     console.log("Pendo is ready!")
                     addTrackEvent();
+                    addRCElementHandler();
                 },
                 guidesLoaded: function() {
                     console.log("The guides have loaded!")
@@ -132,15 +133,25 @@ var accounts = [
         }
 
         function addTrackEvent(){
-            var trackEventBtn = document.querySelector('#trackEventBtn');
-            trackEventBtn.addEventListener('click', function(){
-                console.log('Sending Track Event to Pendo');
+            var trackEventBtn = dom('#trackEventBtn')[0];
+            trackEventBtn.on('click', function(e){
+                console.log('Sending Track Event to Pendo: ' + e);
                 alert('Track Event Sent!');
                 pendo.track('Track Event Example', {
                     user: pendo.getSerializedMetadata().visitor.id,
                     role: pendo.getSerializedMetadata().visitor.role,
                     text: "This is some sample text"
                 })  
-        })
-    }
-})('5ed91671-dfe6-4f7a-546f-5fd7b0804e58');
+            })
+        }
+
+        function addRCElementHandler(){
+            var launchRCElement = dom('[data-id="1.0-Nav-Home.Dashboard"]')[0];
+            var rc = pendo.findGuideById('uY3KchoDHeBYQ5TsMmMd3f-p1gA');
+            launchRCElement.on('click', function(e){
+                rc.launch();
+                // rc.modules[0].launch();
+            })
+        }
+
+})('5ed91671-dfe6-4f7a-546f-5fd7b0804e58', pendo.dom);
