@@ -72,6 +72,7 @@ body {
 
 [tabindex="-1"]:focus {
   /*outline: 0 !important;*/
+  outline: -webkit-focus-ring-color auto 1px !important;
 }
 
 hr {
