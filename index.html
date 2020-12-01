@@ -740,7 +740,24 @@
         embedded_svc.addEventHandler("onSettingsCallCompleted", 	function(data) {
           console.log("onSettingsCallCompleted event was fired. Agent availability status is " + data.isAgentAvailable ? "online": 		"offline");
       });
-  	};
+    };
+    
+    console.log('Initializing...');
+      embedded_svc.init(
+        'https://toast--trdev.my.salesforce.com',
+        'https://trdev-toast.cs69.force.com/success',
+        gslbBaseURL,
+        '00D2D000000E5U5',
+        'Toast_Web_Chat_V2',
+        {
+          baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content',
+          deploymentId: '5723c000000k9iJ',
+          buttonId: '573C00000008RMb',
+          baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat',
+          eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3c0000000CK9EAM_174b30518e1',
+          isOfflineSupportEnabled: false
+        }
+      );
     
     if (!window.embedded_svc) {
       var s = document.createElement('script');
