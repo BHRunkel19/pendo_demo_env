@@ -148,7 +148,7 @@ var accounts = [
 
         function configEmbeddedSvc(){
             var initESW = function(gslbBaseURL) {
-                embedded_svc.settings.targetElement = document.querySelector('#toast_sf_chat');
+                // embedded_svc.settings.targetElement = document.querySelector('#toast_sf_chat');
                 embedded_svc.settings.displayHelpButton = false; //Or false
                 embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
           
