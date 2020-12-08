@@ -12020,7 +12020,8 @@ body.sidebar-toggled footer.sticky-footer {
 
 /* Track Event Button Container */
 #trackEventBtn,
-#trackEventBtnContainer,
+#helpBtn,
+#btnContainer,
 #modalBtn {
   cursor: pointer;
 }
