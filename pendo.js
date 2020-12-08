@@ -118,8 +118,8 @@ var accounts = [
                 guidesLoaded: function() {
                     console.log("The guides have loaded!")
                     lookupGuides(pendo.guides);
-                    addRCElementHandler();
-                    // callback //
+                    //addRCElementHandler();
+                    addHelpHandler();
                 },
                 guidesFailed: function() {
                     console.log("The guides have failed!")
@@ -201,13 +201,18 @@ var accounts = [
         // }
             
 
-        function addRCElementHandler(){
-            var launchRCElement = document.querySelector('[data-id="1.0-Nav-Home.Dashboard"]');
+        //function addRCElementHandler(){
+        //    var launchRCElement = document.querySelector('[data-id="1.0-Nav-Home.Dashboard"]');
+        //  var rc = pendo.findGuideById('uY3KchoDHeBYQ5TsMmMd3f-p1gA');
+        //    launchRCElement.addEventListener('click', function(e){
+        //        rc.launch();
+        //        // rc.modules[0].launch();
+        //    })
+        //}
+
+        function addHelpHandler(){
             var rc = pendo.findGuideById('uY3KchoDHeBYQ5TsMmMd3f-p1gA');
-            launchRCElement.addEventListener('click', function(e){
-                rc.launch();
-                // rc.modules[0].launch();
-            })
+            rc.toggleClass('rc-active');
         }
 
 })('5ed91671-dfe6-4f7a-546f-5fd7b0804e58');
