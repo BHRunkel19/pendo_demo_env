@@ -12018,6 +12018,10 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+#btnContainer{
+  width: 250px;
+}
+
 /* Track Event Button Container */
 #trackEventBtn,
 #helpBtn,
